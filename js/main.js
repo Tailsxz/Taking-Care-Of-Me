@@ -22,17 +22,16 @@ const searchButton = document.querySelector('.button_search');
 //This is the section we will be creating the cards in.
 const cardsSection = document.querySelector('.content_cards');
 
+//Function to dynamically create cards for each product
 function createCard(obj) {
   const product = obj.product_name;
   let brand = obj.brands;
   let imageUrl = obj.image_front_url;
-  console.log(imageUrl);
   //Ingredients will be given as an array of objects, we are mapping these ingredients to their id property, and joining them to form the list of ingredients.
   let ingredients;
   if (ingredients in obj) {
   ingredients = obj.ingredients.map(e => e.id.replace('en:', '')).join(', ');
   }
-  console.log(ingredients)
   let novaScore = obj.nova_group;
   let nutriScore = obj.nutriscore_grade;
   //Setting default values for properties that were not found
@@ -64,6 +63,10 @@ function createCard(obj) {
 function fetchProducts() {
   const category = currentCategory.value;
   const url = `https://world.openfoodfacts.net/api/v2/search?categories_tags_en=${category}&countries_tags_en=United States&fields=product_name,nutrition_grades,brands,ingredients,nutriscore_grade,image_front_url,nova_group&sort_by=nutriscore_score`
+
+  //Calling resetting of the content_cards section each new fetch.
+  resetCards();
+
   fetch(url)
     .then(res => {
       if (!res.ok) {
@@ -78,6 +81,10 @@ function fetchProducts() {
       products.forEach(product => createCard(product))
     })
     .catch(err => console.log(err));
+}
+
+function resetCards() {
+  cardsSection.innerHTML = '';
 }
 
 //Function to initialize an event listener, with the parameters of the element we want to add a listener to, and the function to bind to the event.
