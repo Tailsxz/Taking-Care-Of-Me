@@ -1,0 +1,1 @@
+//This is the url template we will be fetching our information from https://world.openfoodfacts.net/api/v2/search?categories_tags_en=Orange Juice&countries_tags_en=United States&fields=product_name,nutrition_grades,brands,ingredients,nutriscore_grade,image_front_url,nova_group&sort_by=nutriscore_score
