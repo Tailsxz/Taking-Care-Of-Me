@@ -59,7 +59,7 @@ function createCard(obj) {
     </p>
   </section>` : ''}
   </section>`
-  
+
   cardsSection.appendChild(cardElement);
 }
 //We have our card element creator, now lets see if we can do it for each item in the array.
