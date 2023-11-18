@@ -27,18 +27,23 @@ function createCard(obj) {
   const product = obj.product_name;
   let brand = obj.brands;
   let imageUrl = obj.image_front_url;
-  //Ingredients will be given as an array of objects, we are mapping these ingredients to their id property, and joining them to form the list of ingredients.
+
+  //Ingredients will be given as an array of objects, but the property doesn't exist in some so we can set a conditional to set the ingredients if availiable, do nothing if not.
   let ingredients;
-  if (ingredients in obj) {
-  ingredients = obj.ingredients.map(e => e.id.replace('en:', '')).join(', ');
-  }
   let novaScore = obj.nova_group;
   let nutriScore = obj.nutriscore_grade;
+
   //Setting default values for properties that were not found
   brand = brand || 'No brand specified';
   imageUrl = imageUrl || 'assets/alt-image.jpg';
   novaScore = obj.nova_group || 'No NOVA Score provided';
   nutriScore = nutriScore || 'No Nutri-Score provided';
+
+  //Mapping ingredients to their ids and joining them to form a list of ingredients.
+  if (ingredients in obj) {
+    ingredients = obj.ingredients.map(e => e.id.replace('en:', '')).join(', ');
+    }
+
   const cardElement = document.createElement('section');
   cardElement.classList.add('card');
   cardElement.innerHTML = `<h2 class="card_brand">${brand}</h2>
@@ -54,6 +59,7 @@ function createCard(obj) {
     </p>
   </section>` : ''}
   </section>`
+  
   cardsSection.appendChild(cardElement);
 }
 //We have our card element creator, now lets see if we can do it for each item in the array.
