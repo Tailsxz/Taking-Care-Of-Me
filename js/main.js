@@ -29,7 +29,7 @@ function createCard(obj) {
   let imageUrl = obj.image_front_url;
 
   //Ingredients will be given as an array of objects, but the property doesn't exist in some so we can set a conditional to set the ingredients if availiable, do nothing if not.
-  let ingredients;
+  let ingredients = obj.ingredients;
   let novaScore = obj.nova_group;
   let nutriScore = obj.nutriscore_grade;
 
@@ -40,10 +40,9 @@ function createCard(obj) {
   nutriScore = nutriScore || 'No Nutri-Score provided';
 
   //Mapping ingredients to their ids and joining them to form a list of ingredients.
-  if (ingredients in obj) {
+  if (ingredients != undefined) {
     ingredients = obj.ingredients.map(e => e.id.replace('en:', '')).join(', ');
     }
-
   const cardElement = document.createElement('section');
   cardElement.classList.add('card');
   cardElement.innerHTML = `<h2 class="card_brand">${brand}</h2>
@@ -106,6 +105,5 @@ function initEventListener(element, func) {
 
 initEventListener(searchButton, (e) => {
   console.log(e, searchButton);
-  e.preventDefault;
   fetchProducts();
 });
