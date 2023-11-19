@@ -68,12 +68,18 @@ function createCard(obj) {
 
 function fetchProducts() {
   const category = currentCategory.value;
+  const options = {
+    'User-Agent': 'takingcareofme.netlify.app, ptai7722@gmail.com',
+  };
   const url = `https://world.openfoodfacts.net/api/v2/search?categories_tags_en=${category}&countries_tags_en=United States&fields=product_name,nutrition_grades,brands,ingredients,nutriscore_grade,image_front_url,nova_group&sort_by=nutriscore_score`
 
+  //guard clause if there is no current input
+  if (!category) return;
+  
   //Calling resetting of the content_cards section each new fetch.
   resetCards();
 
-  fetch(url)
+  fetch(url, options)
     .then(res => {
       if (!res.ok) {
         console.log('Failed Fetch')
@@ -99,6 +105,7 @@ function initEventListener(element, func) {
 }
 
 initEventListener(searchButton, (e) => {
+  console.log(e, searchButton);
   e.preventDefault;
   fetchProducts();
 });
