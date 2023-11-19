@@ -41,7 +41,7 @@ function createCard(obj) {
 
   //Mapping ingredients to their ids and joining them to form a list of ingredients.
   if (ingredients != undefined) {
-    ingredients = obj.ingredients.map(e => e.id.replace('en:', '')).join(', ');
+    ingredients = obj.ingredients.map(e => e.id.replace('en:', '').replace('la:', '')).join(', ');
     }
   const cardElement = document.createElement('section');
   cardElement.classList.add('card');

@@ -13,22 +13,24 @@
 </head>
 <body>
    <main>
-    <section class="hero center">
-      <section class="hero_title">
-        <h1 class="hero_title_heading | fs-large">Taking Care Of Me</h1>
-        <p class="hero_message | fs-medium">You only get one  body in this lifetime, please take care of it!</p>
+    <div class="container center">
+      <section class="hero center">
+        <section class="hero_title">
+          <h1 class="hero_title_heading | fs-large">Taking Care Of Me</h1>
+          <p class="hero_message | fs-medium">You only get one  body in this lifetime, please take care of it!</p>
+        </section>
+        <section class="form">
+          <p class="form_message | fs-small">Search a category of Food/Drink to get some healthy options!</p>
+          <form action="" onSubmit="return false" class="fs-small">
+            <input type="text" class="input_category" title="Some examples of food categories Ramen, Chocolates, Burgers">
+            <button class="button button_search">Search</button>
+          </form>
+        </section>
       </section>
-      <section class="form">
-        <p class="form_message | fs-small">Search a category of Food/Drink to get some healthy options!</p>
-        <form action="" onSubmit="return false" class="fs-small">
-          <input type="text" class="input_category" title="Some examples of food categories Ramen, Chocolates, Burgers">
-          <button class="button button_search">Search</button>
-        </form>
-      </section>
-    </section>
-    <section class="content_cards" id="content_cards">
+      <section class="content_cards center" id="content_cards">
       <!-- Section to hold the cards for each query -->
-    </section>
+      </section>
+    </div>
   </main>
   <script type="text/javascript" src="js/main.js"></script>
 </body>
