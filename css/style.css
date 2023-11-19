@@ -126,8 +126,17 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-/* .card {
-} */
+.card {
+  border: 2px solid black;
+  padding: 2rem;
+  margin-block: 4rem;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.card_image {
+  max-height: 200px;
+}
 
 @media(max-width: 45rem) {
   .outer-gradient {
