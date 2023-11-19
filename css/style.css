@@ -1,0 +1,78 @@
+/* Custom Properties */ 
+:root {
+  /* Color Props */
+  --color-neutral-700: #011936;
+  --color-neutral-400: hsl(0, 0%, 100%);
+  --color-primary-300: hsl(330, 100%, 80%);
+  --color-primary-400: hsl(350, 70%, 53%);
+  --color-secondary-300: hsl(101, 100%, 90%);
+  --color-secondary-400: hsl(196, 67%, 33%);
+
+  /* Text Props */
+  --fs-small: 2rem;
+  --fs-medium: 3rem;
+  --fs-large: 4rem;
+}
+
+/* Utility Classes */
+.fs-small {
+  font-size: var(--fs-small);
+}
+
+.fs-medium {
+  font-size: var(--fs-medium);
+}
+
+.fs-large {
+  font-size: var(--fs-large);
+}
+
+.center {
+  margin-inline: auto;
+}
+/* Default Styling */
+html {
+  font-family: 'Eczar', 'Calibri', 'Comic Sans MS', 'Arial', sans-serif;
+}
+
+.outer-gradient {
+  min-height: 100svh;
+  padding-block-start: 10svh; 
+  /* Outer background gradient*/
+  background-image: linear-gradient(210deg,
+                    var(--color-secondary-400),
+                    var(--color-secondary-300));
+}
+
+/* Hero Styling */
+.hero {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  padding-inline: 3rem;
+  color: var(--color-neutral-700); 
+  width: min(100% - 15rem, 1300px);
+  min-height: 80svh;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.6);
+
+  /* Background gradient*/
+  background-image: linear-gradient(45deg,
+                    var(--color-primary-400),
+                    var(--color-primary-300));
+}
+
+.hero_title {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 2px solid var(--color-neutral-700);
+}
+
+/* Form Styling */
+.form_message {
+  margin-block-end: 2rem;
+}
+
+
