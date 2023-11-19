@@ -30,8 +30,8 @@ function createCard(obj) {
 
   //Ingredients will be given as an array of objects, but the property doesn't exist in some so we can set a conditional to set the ingredients if availiable, do nothing if not.
   let ingredients = obj.ingredients;
+  let nutriScore = obj.nutriscore_grade.toUpperCase();
   let novaScore = obj.nova_group;
-  let nutriScore = obj.nutriscore_grade;
 
   //Setting default values for properties that were not found
   brand = brand || 'No brand specified';
@@ -45,16 +45,18 @@ function createCard(obj) {
     }
   const cardElement = document.createElement('section');
   cardElement.classList.add('card');
-  cardElement.innerHTML = `<h2 class="card_brand">${brand}</h2>
-  <p class="card_product">${product}</p>
+  cardElement.innerHTML = `<h2 class="card_brand | fs-medium">${brand}</h2>
+  <p class="card_product | fs-small">${product}</p>
   <img src="${imageUrl}" alt="" class="card_image">
   <section class="card_info">
-    <span class="product_nutri-score">${nutriScore}
+    <h3 class="fs-xsmall">Nutri-Score</h3>
+    <span class="product_nutri-score fs-small">${nutriScore}
     </span>
-    <span class="product_NOVA-score">${novaScore}</span>
+    <h3 class="fs-xsmall">NOVA</h3>
+    <span class="product_NOVA-score fs-small">${novaScore}</span>
     ${ingredients ? `<section class="product_ingredients">
-    <h3>Ingredients</h3>
-    <p class="product_ingredients">${ingredients}
+    <h3 class="fs-medium">Ingredients</h3>
+    <p class="product_ingredients | fs-small">${ingredients}
     </p>
   </section>` : ''}
   </section>`
