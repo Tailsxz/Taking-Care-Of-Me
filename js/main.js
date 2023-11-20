@@ -90,7 +90,6 @@ function fetchProducts() {
       })
     .then(data => data.products)
     .then(products => {
-      console.log(products);
       products.forEach(product => createCard(product))
     })
     .catch(err => console.log(err));
@@ -106,6 +105,5 @@ function initEventListener(element, func) {
 }
 
 initEventListener(searchButton, (e) => {
-  console.log(e, searchButton);
   fetchProducts();
 });
