@@ -133,9 +133,10 @@ html {
 }
 
 .input_category:focus-visible,
-.button_search:focus-visible {
+.button_search:focus-visible,
+.button_search:hover {
   outline: none;
-  box-shadow: 0px 0px 30px -5px var(--color-secondary-300);
+  box-shadow: 0px 0px 30px 0px var(--color-secondary-300);
 }
 
 /* Card Section Styling */
@@ -149,7 +150,7 @@ html {
 .card {
   border: 2px solid black;
   padding: 2rem;
-  margin-block: 4rem;
+  margin-block: 1rem;
   border-radius: 10px;
   background-color: white;
 }
