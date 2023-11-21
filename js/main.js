@@ -23,6 +23,10 @@ const ORANGE = '#ff8400';
 const DARK_GREEN = '#008331';
 
 //Lets grab all the dom elements we need for this project, storing them globally in a variable
+
+//the outer gradient for the cards section, will be hidden by default
+const outerGradientCards = document.querySelector('.outer_gradient-cards');
+
 const currentCategory = document.querySelector('.input_category');
 const searchButton = document.querySelector('.button_search');
 //This is the section we will be creating the cards in.
@@ -112,6 +116,8 @@ function fetchProducts() {
       products.forEach((product, index) => createCard(product, index))
     })
     .catch(err => console.log(err));
+
+  outerGradientCards.style.display = block;
 }
 
 function resetCards() {

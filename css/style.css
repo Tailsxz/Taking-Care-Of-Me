@@ -52,6 +52,7 @@ html {
 }
 
 .outer_gradient-cards {
+  display: none;
   padding-block-end: 2rem;
   background-image: linear-gradient(180deg,
                     var(--color-secondary-300),
