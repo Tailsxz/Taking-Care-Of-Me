@@ -16,7 +16,7 @@
 //Now that we can see the data for one product, lets start pseudocoding what we have to do.
 //We know we will recieve an array of object products, with the object containing all the related data. We want to seperate each piece of info we want to be stored in a variable to be able to use template literals to print each card to the dom for each product. Lets try to print one card to the dom for the first product for now.
 //Score Colors
-const RED = '#ff3900'
+const RED = '#E00D29'
 const GREEN = '#00ba00';
 const YELLOW = '#ffcd00';
 const ORANGE = '#ff8400';
@@ -55,7 +55,7 @@ function createCard(obj, index) {
   <p class="card_product | fs-small">${product}</p>
   <img src="${imageUrl}" alt="" class="card_image">
   <section class="card_info">
-    <section class="card_info-scores">
+    <section class="card_info_scores">
       <div class="container_nutri">
         <h3 class="fs-xsmall">Nutri-Score</h3>
         <span class="product_nutri-score nutri${index} | fs-small">${nutriScore}</span>
