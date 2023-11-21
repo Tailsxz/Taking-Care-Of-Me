@@ -81,7 +81,6 @@ function createCard(obj, index) {
   //grabbing the newly created Nutri-score and NOVA scores
   let nutri_score = document.querySelector(`.nutri${index}`);
   let nova_score = document.querySelector(`.nova${index}`);
-  console.log(nutri_score, nova_score);
   //calling the function to apply the background color for the scores
   applyBackground(nutri_score, nutriScore);
   applyBackground(nova_score, novaScore);
@@ -117,7 +116,7 @@ function fetchProducts() {
     })
     .catch(err => console.log(err));
 
-  outerGradientCards.style.display = block;
+  outerGradientCards.style.display = 'block';
 }
 
 function resetCards() {
