@@ -1,5 +1,7 @@
 # Project Title
-Taking Care Of Me [Live Site](https://takingcareofme.netlify.app)
+Taking Care Of Me 
+
+[Live Site](https://takingcareofme.netlify.app)
 
 This project is aimed to allow users to look up a food category, to find products with the best nutriscore for that category. The [openFOODfacts](https://openfoodfacts.github.io/openfoodfacts-server/api/) API is used to retrieve the products and display related data.
 
