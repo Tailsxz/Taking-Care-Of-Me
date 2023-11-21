@@ -20,10 +20,10 @@ To get a copy of this project, you can fork the repo then clone it as your own.
 [Clone the Repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
 ### Knowledge gained from this project
--Learned how to use createElement() and innerHTML to dynamically create cards from fetched data.
+- Learned how to use createElement() and innerHTML to dynamically create cards from fetched data.
 
--First usage of grid to structure the cards created.
+- First usage of grid to structure the cards created.
 
--First real use of a switch statement to dynamically set background colors on each Nutri-score and NOVA score.
+- First real use of a switch statement to dynamically set background colors on each Nutri-score and NOVA score.
 
--Learned how to set default values for when the data was unavailiable.
+- Learned how to set default values for when the data was unavailiable.
