@@ -164,12 +164,17 @@ html {
 .card_image {
   max-height: 200px;
   border-radius: 4px;
+  margin-block: 1rem;
 }
 
 .card_info_scores {
   display: flex;
   gap: 1rem;
   margin-block: 1rem;
+}
+
+.product_ingredients_heading {
+  margin-block-start: 2rem;
 }
 
 @media(max-width: 45em) {

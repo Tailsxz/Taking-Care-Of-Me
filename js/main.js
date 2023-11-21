@@ -66,7 +66,7 @@ function createCard(obj, index) {
       </div>
     </section>
     ${ingredients ? `<section class="product_ingredients">
-    <h3 class="fs-medium">Ingredients</h3>
+    <h3 class="product_ingredients_heading | fs-medium">Ingredients</h3>
     <p class="product_ingredients | fs-small">${ingredients}
     </p>
   </section>` : ''}
