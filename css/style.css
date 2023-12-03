@@ -68,7 +68,7 @@ body {
   gap: 3rem;
   align-items: center;
   padding-inline: 3rem;
-  margin-block-end: 5vh;
+  /* margin-block-end: 5vh; */
   margin-block-end: 10svh;
   color: var(--color-neutral-700); 
   min-height: 80vh;
