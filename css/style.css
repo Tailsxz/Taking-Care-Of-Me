@@ -42,7 +42,7 @@ body {
 .outer_gradient-hero {
   min-height: 100vh;
   min-height: 100svh;
-  padding-block-start: 10vh;
+  padding-block-start: 5vh;
   padding-block-start: 10svh;
   background-image: linear-gradient(180deg,
                     var(--color-secondary-400),
@@ -68,7 +68,7 @@ body {
   gap: 3rem;
   align-items: center;
   padding-inline: 3rem;
-  margin-block-end: 10vh;
+  margin-block-end: 5vh;
   margin-block-end: 10svh;
   color: var(--color-neutral-700); 
   min-height: 80vh;
