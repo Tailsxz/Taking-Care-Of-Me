@@ -34,16 +34,15 @@
 html {
   font-family: 'Eczar', 'Calibri', 'Comic Sans MS', 'Arial', sans-serif;
 }
-
-/* body {
-  padding-block-start: 10svh;
-  background-image: linear-gradient(180deg,
-                    var(--color-secondary-400),
-                    var(--color-secondary-300));
+/* 
+body {
+  height: 100%;
 } */
 
 .outer_gradient-hero {
+  min-height: 100vh;
   min-height: 100svh;
+  padding-block-start: 10vh;
   padding-block-start: 10svh;
   background-image: linear-gradient(180deg,
                     var(--color-secondary-400),
@@ -69,8 +68,10 @@ html {
   gap: 3rem;
   align-items: center;
   padding-inline: 3rem;
+  margin-block-end: 10vh;
   margin-block-end: 10svh;
   color: var(--color-neutral-700); 
+  min-height: 80vh;
   min-height: 80svh;
   border-radius: 10px;
   box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.6);
