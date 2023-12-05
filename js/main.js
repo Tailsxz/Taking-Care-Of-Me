@@ -40,14 +40,14 @@ function createCard(obj, index) {
 
   //Ingredients will be given as an array of objects, but the property doesn't exist in some so we can set a conditional to set the ingredients if availiable, do nothing if not.
   let ingredients = obj.ingredients;
-  let nutriScore = obj.nutriscore_grade?.toUpperCase();
+  let nutriScore = obj.nutriscore_grade
   let novaScore = obj.nova_group;
 
   //Setting default values for properties that were not found
   brand = brand || 'No brand specified';
   imageUrl = imageUrl || 'assets/alt-image.jpg';
   novaScore = obj.nova_group || '?';
-  nutriScore = nutriScore || '?';
+  nutriScore = nutriScore.toUpperCase() || '?';
 
   //Mapping ingredients to their ids and joining them to form a list of ingredients.
   if (ingredients != undefined) {
