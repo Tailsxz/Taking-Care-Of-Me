@@ -47,7 +47,7 @@ function createCard(obj, index) {
   brand = brand || 'No brand specified';
   imageUrl = imageUrl || 'assets/alt-image.jpg';
   novaScore = obj.nova_group || '?';
-  nutriScore = nutriScore.toUpperCase() || '?';
+  nutriScore = nutriScore?.toUpperCase() || '?';
 
   //Mapping ingredients to their ids and joining them to form a list of ingredients.
   if (ingredients != undefined) {
