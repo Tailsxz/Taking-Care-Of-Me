@@ -40,7 +40,7 @@ function createCard(obj, index) {
 
   //Ingredients will be given as an array of objects, but the property doesn't exist in some so we can set a conditional to set the ingredients if availiable, do nothing if not.
   let ingredients = obj.ingredients;
-  let nutriScore = obj.nutriscore_grade.toUpperCase();
+  let nutriScore = obj.nutriscore_grade?.toUpperCase();
   let novaScore = obj.nova_group;
 
   //Setting default values for properties that were not found
@@ -95,10 +95,12 @@ function fetchProducts() {
     'User-Agent': 'takingcareofme.netlify.app, ptai7722@gmail.com',
   };
   const url = `https://world.openfoodfacts.net/api/v2/search?categories_tags_en=${category}&countries_tags_en=United States&fields=product_name,nutrition_grades,brands,ingredients,nutriscore_grade,image_front_url,nova_group&sort_by=nutriscore_score`
-
+  
   //guard clause if there is no current input
   if (!category) return;
   
+  outerGradientCards.style.display = 'none';
+  //Hiding the lower gradient when a new fetch happens.
   //Calling resetting of the content_cards section each new fetch.
   resetCards();
 
@@ -113,10 +115,10 @@ function fetchProducts() {
     .then(data => data.products)
     .then(products => {
       products.forEach((product, index) => createCard(product, index))
+      outerGradientCards.style.display = 'block';
     })
     .catch(err => console.log(err));
 
-  outerGradientCards.style.display = 'block';
 }
 
 function resetCards() {
