@@ -1,5 +1,5 @@
-# Project Title
-Taking Care Of Me 
+# Taking Care Of Me
+
 
 [Live Site](https://takingcareofme.netlify.app)
 
